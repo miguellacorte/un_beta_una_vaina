@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UN BETA UNA VAINA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Helvetica Neue', sans-serif;
+            transition: background 1s;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        /* Text at the top left */
+        .top-left {
+            position: absolute;
+            font-size: 8vw;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Text at the bottom right */
+        .bottom-right {
+            position: absolute;
+            font-size: 8vw;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Background color pairs */
+        body.bg-1 {
+            background: linear-gradient(to right, blue 50%, orange 50%);
+        }
+
+        body.bg-2 {
+            background: linear-gradient(to right, red 50%, green 50%);
+        }
+
+        body.bg-3 {
+            background: linear-gradient(to right, purple 50%, yellow 50%);
+        }
+
+        body.bg-4 {
+            background: linear-gradient(to right, cyan 50%, #ff4500 50%);
+        }
+
+        body.bg-5 {
+            background: linear-gradient(to right, magenta 50%, #adff2f 50%);
+        }
+
+        body.bg-6 {
+            background: linear-gradient(to right, #00ced1 50%, red 50%);
+        }
+
+        body.bg-7 {
+            background: linear-gradient(to right, #9acd32 50%, #ff1493 50%);
+        }
+
+        body.bg-8 {
+            background: linear-gradient(to right, #8a2be2 50%, #ffa500 50%);
+        }
+
+        body.bg-9 {
+            background: linear-gradient(to right, #40e0d0 50%, #b7410e 50%);
+        }
+
+        body.bg-10 {
+            background: linear-gradient(to right, #008080 50%, #ff6347 50%);
+        }
+
+        /* Add more color pairs as needed */
+
+    </style>
+</head>
+<body class="bg-1">
+    <div class="top-left">UN BETA</div>
+    <div class="bottom-right">UNA VAINA</div>
+    <!-- <h1>Your Content Goes Here</h1> -->
+
+    <audio autoplay loop>
+        <source src="/assets/un_beta_una_vaina.mp3" type="audio/mp3">
+        <!-- Add additional source elements for other audio formats (e.g., ogg) -->
+        Your browser does not support the audio tag.
+    </audio>
+
+
+
+    <script>
+        // JavaScript to change background color every second
+        const body = document.body;
+        let currentColorIndex = 1;
+
+        setInterval(() => {
+            currentColorIndex = (currentColorIndex % 10) + 1;
+            body.className = `bg-${currentColorIndex}`;
+        }, 1200);
+    </script>
+</body>
+</html>
