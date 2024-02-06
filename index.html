@@ -82,20 +82,15 @@
         body.bg-10 {
             background: linear-gradient(to right, #008080 50%, #ff6347 50%);
         }
-
-        /* Add more color pairs as needed */
-
     </style>
 </head>
 <body class="bg-1">
     <div class="top-left">UN BETA</div>
     <div class="bottom-right">UNA VAINA</div>
-    <!-- <h1>Your Content Goes Here</h1> -->
 
-      <audio autoplay loop>
-        <!-- Updated source with the GitHub link -->
-       <source src="https://raw.githubusercontent.com/miguellacorte/un_beta_una_vaina/73d39847c2dc16cb59e8ecf913f2d0ee45d027ea/assets/un_beta_una_vaina.mp3" type="audio/mp3">
-        <!-- Add additional source elements for other audio formats (e.g., ogg) -->
+    <audio autoplay loop muted id="audio">
+        <!-- Updated source with the raw.githubusercontent.com link -->
+        <source src="https://raw.githubusercontent.com/miguellacorte/un_beta_una_vaina/73d39847c2dc16cb59e8ecf913f2d0ee45d027ea/assets/un_beta_una_vaina.mp3" type="audio/mp3">
         Your browser does not support the audio tag.
     </audio>
 
@@ -108,6 +103,13 @@
             currentColorIndex = (currentColorIndex % 10) + 1;
             body.className = `bg-${currentColorIndex}`;
         }, 1200);
+
+        // Unmute audio on user interaction
+        document.addEventListener('click', function () {
+            const audio = document.getElementById('audio');
+            audio.muted = false;
+            audio.play();
+        });
     </script>
 </body>
 </html>
